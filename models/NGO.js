@@ -1,0 +1,14 @@
+const mongoose = require("mongoose");
+
+const ngoSchema = new mongoose.Schema({
+  name: String,
+  description: String,
+  location: String,
+  category: String,
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+module.exports = mongoose.model("NGO", ngoSchema);
